@@ -1,0 +1,22 @@
+
+body {
+    background-color: #F6E9D3;
+    color: #3B2E2A;
+    font-family: Georgia, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+h1 {
+    font-size: 4em;
+    margin: 0;
+}
+p {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
