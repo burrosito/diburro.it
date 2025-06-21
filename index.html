@@ -1,15 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Burro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #faf8f4;
+      color: #2e2e2e;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 2.5rem;
+      letter-spacing: 0.15rem;
+    }
+    .sub {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: -1rem;
+      color: #6f6f6f;
+    }
+    .hero {
+      width: 100%;
+      height: 300px;
+      background-color: #e6e2dd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #999;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .item {
+      background-color: white;
+      aspect-ratio: 1 / 1;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    .about {
+      max-width: 600px;
+      margin: 3rem auto;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #4b4b4b;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Burro</h1>
-        <p>Design caldo, selezionato con cura.</p>
-    </div>
+  <header>BURRO</header>
+  <div class="sub">Oggetti d'arte e design per la casa</div>
+
+  <div class="hero">
+    [Inserisci immagine d'apertura qui]
+  </div>
+
+  <div class="grid">
+    <div class="item">Oggetto 1</div>
+    <div class="item">Oggetto 2</div>
+    <div class="item">Oggetto 3</div>
+    <div class="item">Oggetto 4</div>
+  </div>
+
+  <div class="about">
+    Burro è una selezione personale di arredi, oggetti e piccole storie. Ogni pezzo è scelto per la sua qualità, forma e carattere. Uno spazio domestico caldo, un gesto quotidiano.
+  </div>
+
+  <footer>
+    © 2025 BURRO – <a href="https://www.instagram.com/tuonome">Instagram</a>
+  </footer>
 </body>
 </html>
