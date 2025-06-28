@@ -15,7 +15,6 @@
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Work Sans', sans-serif;
       background-color: #ffffff;
       color: #2e2e2e;
@@ -35,6 +34,19 @@
       color: black;
     }
 
+    .language-switch {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .language-switch a {
+      color: #2e2e2e;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -47,11 +59,34 @@
     .carousel {
       flex: 1 1 50%;
       max-width: 600px;
+      position: relative;
     }
 
     .carousel img {
       width: 100%;
-      border-radius: 0;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
     }
 
     .details {
@@ -61,7 +96,13 @@
       justify-content: space-between;
     }
 
-    .description {
+    .description-title {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .description-text {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 2rem;
@@ -81,25 +122,48 @@
 </head>
 <body>
 
+  <div class="language-switch">
+    <a href="oggetto1.html">IT</a> | <a href="oggetto1-en.html">EN</a>
+  </div>
+
   <header>
     <a href="index.html">BURRO</a>
   </header>
 
   <div class="container">
     <div class="carousel">
-      <img src="oggetto1_1.jpg" alt="Oggetto 1 - vista 1">
-      <img src="oggetto1_2.jpg" alt="Oggetto 1 - vista 2">
-      <!-- Puoi aggiungere altri <img> -->
+      <img src="oggetto1_1.jpg" alt="Vista 1" class="active">
+      <img src="oggetto1_2.jpg" alt="Vista 2">
+      <img src="oggetto1_3.jpg" alt="Vista 3">
+      <div class="carousel-buttons">
+        <button onclick="changeSlide(-1)">&#10094;</button>
+        <button onclick="changeSlide(1)">&#10095;</button>
+      </div>
     </div>
 
     <div class="details">
       <div class="description">
-        <p>Descrizione breve dell’oggetto: provenienza, materiali, epoca o altro.</p>
-        <p>Misure: LxPxA cm</p>
+        <div class="description-title">Lampada Mazda 1930</div>
+        <div class="description-text">
+          Iconica lampada da tavolo francese con base in bachelite e paralume in vetro smerigliato.
+          <br>Origine: Francia, anni '30<br>
+          Condizioni eccellenti, con segni minimi d'uso. Cablaggio rivisto.
+        </div>
       </div>
       <a href="mailto:tuo@email.it?subject=Riserva%20Oggetto%201" class="reserve-btn">Riserva</a>
     </div>
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
