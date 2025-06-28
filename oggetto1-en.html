@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BURRO – Object 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #ffffff;
+      color: #2e2e2e;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      font-size: 1rem;
+    }
+
+    .logo {
+      font-family: 'Black Mango', serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+    }
+
+    .lang-switch {
+      font-size: 0.9rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .carousel {
+      flex: 1 1 50%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    .description {
+      flex: 1 1 40%;
+    }
+
+    .description h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .description p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .reserve-button {
+      background-color: black;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-controls button {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">BURRO</a>
+    <div class="lang-switch">
+      <a href="oggetto1.html">IT</a> | EN
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="carousel">
+      <img id="carouselImage" src="oggetto1_1.jpg" alt="Object 1" />
+      <div class="carousel-controls">
+        <button onclick="prevImage()">←</button>
+        <button onclick="nextImage()">→</button>
+      </div>
+    </div>
+    <div class="description">
+      <h1>1930s Mazda Table Lamp</h1>
+      <p>This 1930s table lamp, with its soft industrial lines and original Mazda bulb, is a beautiful piece for any interior space. Carefully restored and rewired.</p>
+      <button class="reserve-button">Reserve</button>
+    </div>
+  </div>
+
+  <script>
+    const images = ["oggetto1_1.jpg", "oggetto1_2.jpg", "oggetto1_3.jpg"];
+    let current = 0;
+
+    function showImage(index) {
+      const img = document.getElementById("carouselImage");
+      img.src = images[index];
+    }
+
+    function prevImage() {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+    }
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }
+  </script>
+</body>
+</html>
