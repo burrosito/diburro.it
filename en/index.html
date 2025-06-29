@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BURRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Black Mango';
+      src: url('../black-mango-regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #ffffff;
+      color: #2e2e2e;
+    }
+
+    .hero {
+      background-color: #ffffff;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #999;
+    }
+
+    .hero-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    .title {
+      font-family: 'Black Mango', serif;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .subtitle {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 1rem;
+      color: #6f6f6f;
+      margin-top: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .item {
+      background-color: white;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .about {
+      max-width: 600px;
+      margin: 3rem auto;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #4b4b4b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-row">
+      <div>
+        <div class="title"><a href="../index.html" style="color: black;">BURRO</a></div>
+        <div class="subtitle">Art & design objects</div>
+      </div>
+      <div style="font-size: 0.9rem;">
+        <a href="../index.html" style="color: #999;">IT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a href="oggetti/oggetto1.html" class="item">
+      <img src="../oggetto1_thumb.jpg" alt="Item 1" style="max-width:100%;" />
+    </a>
+    <a href="oggetti/oggetto2.html" class="item">
+      <img src="../oggetto2_thumb.jpg" alt="Item 2" style="max-width:100%;" />
+    </a>
+    <a href="oggetti/oggetto3.html" class="item">
+      <img src="../oggetto3_thumb.jpg" alt="Item 3" style="max-width:100%;" />
+    </a>
+    <a href="oggetti/oggetto4.html" class="item">
+      <img src="../oggetto4_thumb.jpg" alt="Item 4" style="max-width:100%;" />
+    </a>
+  </div>
+
+  <div class="about">
+    Burro is a personal selection of furniture, objects and small stories. Every piece is chosen for its quality, shape and character. A warm domestic space, a daily gesture.
+  </div>
+
+  <footer>
+    © 2025 BURRO – <a href="https://www.instagram.com/tuonome">Instagram</a>
+  </footer>
+</body>
+</html>
