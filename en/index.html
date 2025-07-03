@@ -22,23 +22,22 @@
       color: #2e2e2e;
     }
 
-    .hero {
-      background-color: #ffffff;
-      padding: 3rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: #999;
+    .language-switch {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 0.9rem;
     }
 
-    .hero-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      width: 100%;
-      padding: 0 2rem;
+    .language-switch a {
+      color: #999;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      position: relative;
     }
 
     .title {
@@ -47,13 +46,20 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       font-weight: 600;
+      margin: 0;
+    }
+
+    .title a {
       color: black;
+      text-decoration: none;
     }
 
     .subtitle {
       font-family: 'Work Sans', sans-serif;
       font-size: 1rem;
       color: #6f6f6f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-top: 1rem;
     }
 
@@ -72,6 +78,11 @@
       justify-content: center;
       font-size: 0.9rem;
       color: #999;
+    }
+
+    .item img {
+      max-width: 100%;
+      height: auto;
     }
 
     .about {
@@ -97,39 +108,35 @@
   </style>
 </head>
 <body>
+
   <div class="hero">
-    <div class="hero-row">
-      <div>
-        <div class="title"><a href="../index.html" style="color: black;">BURRO</a></div>
-        <div class="subtitle">Art & design objects</div>
-      </div>
-      <div style="font-size: 0.9rem;">
-        <a href="../index.html" style="color: #999;">IT</a>
-      </div>
+    <div class="language-switch">
+      <a href="../index.html">IT</a>
     </div>
+    <div class="title"><a href="index.html">BURRO</a></div>
+    <div class="subtitle">Objects of Art and Design</div>
   </div>
 
   <div class="grid">
     <a href="oggetti/oggetto1.html" class="item">
-      <img src="../oggetto1_thumb.jpg" alt="Item 1" style="max-width:100%;" />
+      <img src="../oggetto1_thumb.jpg" alt="Object 1" />
     </a>
     <a href="oggetti/oggetto2.html" class="item">
-      <img src="../oggetto2_thumb.jpg" alt="Item 2" style="max-width:100%;" />
+      <img src="../oggetto2_thumb.jpg" alt="Object 2" />
     </a>
     <a href="oggetti/oggetto3.html" class="item">
-      <img src="../oggetto3_thumb.jpg" alt="Item 3" style="max-width:100%;" />
+      <img src="../oggetto3_thumb.jpg" alt="Object 3" />
     </a>
     <a href="oggetti/oggetto4.html" class="item">
-      <img src="../oggetto4_thumb.jpg" alt="Item 4" style="max-width:100%;" />
+      <img src="../oggetto4_thumb.jpg" alt="Object 4" />
     </a>
   </div>
 
   <div class="about">
-    Burro is a personal selection of furniture, objects and small stories. Every piece is chosen for its quality, shape and character. A warm domestic space, a daily gesture.
+    Burro is a personal selection of furniture, objects and little stories.
+    Each piece is chosen for its quality, shape and character.
+    A warm domestic space, a daily gesture.
   </div>
 
   <footer>
-    © 2025 BURRO – <a href="https://www.instagram.com/tuonome">Instagram</a>
-  </footer>
-</body>
-</html>
+    © 2
