@@ -63,14 +63,19 @@
     }
 
     .carousel {
-      flex: 1 1 50%;
-      max-width: 600px;
+      flex: 1 1 40%;
+      max-width: 450px;
       position: relative;
     }
 
     .carousel img {
-      width: 100%;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: scale-down;
       display: none;
+      margin: 0 auto;
     }
 
     .carousel img.active {
@@ -104,14 +109,14 @@
 
     .description-title {
       font-weight: 600;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
     }
 
     .description-text {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
     }
 
     .reserve-btn {
@@ -126,22 +131,25 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <div class="language-switch">
-      <a href="../../oggetti/oggetto1.html">IT</a> | <a href="oggetto1.html">EN</a>
+      <a href="/oggetti/oggetto1.html">IT</a> | <a href="oggetto1.html">EN</a>
     </div>
     <div class="logo-wrapper">
-      <a href="/en/index.html" class="logo">BURRO</a>
+      <a href="/index.html" class="logo">BURRO</a>
     </div>
   </header>
 
   <div class="container">
     <div class="carousel">
-      <img src="/oggetti/oggetto1_1.jpg" alt="View 1" class="active">
-      <img src="/oggetti/oggetto1_2.jpg" alt="View 2">
-      <img src="/oggetti/oggetto1_3.jpg" alt="View 3">
+      <img src="../../immagini/Oggetto1_1.jpg" alt="View 1" class="active">
+      <img src="../../immagini/Oggetto1_2.jpg" alt="View 2">
+      <img src="../../immagini/Oggetto1_3.jpg" alt="View 3">
+      <img src="../../immagini/Oggetto1_4.jpg" alt="View 4">
+      <img src="../../immagini/Oggetto1_5.jpg" alt="View 5">
+      <img src="../../immagini/Oggetto1_6.jpg" alt="View 6">
       <div class="carousel-buttons">
         <button onclick="changeSlide(-1)">&#10094;</button>
         <button onclick="changeSlide(1)">&#10095;</button>
@@ -150,11 +158,12 @@
 
     <div class="details">
       <div class="description">
-        <div class="description-title">Mazda Lamp 1930</div>
+        <div class="description-title">COPPIA DI APPLIQUE ‘PADINA’, 1966</div>
         <div class="description-text">
-          Iconic French table lamp with Bakelite base and frosted glass shade.
-          <br>Origin: France, 1930s<br>
-          Excellent condition, with minimal signs of use. Rewired.
+          Achille &amp; Pier Giacomo Castiglioni<br>
+          aluminum<br>
+          25 × 25 × 11 cm<br>
+          produced by Flos, Italy
         </div>
       </div>
       <a href="mailto:tuo@email.it?subject=Reserve%20Object%201" class="reserve-btn">Reserve</a>
@@ -171,6 +180,5 @@
       slides[currentSlide].classList.add('active');
     }
   </script>
-
 </body>
 </html>
