@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -63,42 +63,28 @@
       margin-top: 1rem;
     }
 
-    .grid {
+     .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0.8cm; /* distanza tra gli oggetti */
+      gap: 0.8cm;
       padding: 2rem;
-      max-width: 900px; /* leggermente più stretta */
+      max-width: 960px;
       margin: 0 auto;
     }
 
     .item {
       background-color: white;
-      width: 200px; /* circa 0.5cm più stretta che prima */
-      aspect-ratio: 1 / 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      overflow: hidden;
-      margin: 0 auto;
       text-align: center;
-    }
-
-    .item {
-      background-color: white;
-      aspect-ratio: 1 / 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
     }
 
     .item img {
       width: 100%;
-      height: auto;
+      max-width: 180px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      display: block;
       border: 1px solid #eee;
     }
 
@@ -163,7 +149,7 @@
         <div class="caption">Lampada da tavolo<br/>Mid-century</div>
         <div class="price">€ 320</div>
       </div>
-
+    </div>
 
   <div class="about">
     Burro è una selezione personale di arredi, oggetti e piccole storie.
