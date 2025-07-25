@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oggetto 7 – BURRO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Black Mango';
+      src: url('/black-mango-regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: #ffffff;
+      color: #2e2e2e;
+    }
+
+    header {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .language-switch a {
+      color: #2e2e2e;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    .logo-wrapper {
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Black Mango', serif;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .carousel {
+      flex: 1 1 40%;
+      max-width: 450px;
+      position: relative;
+    }
+    
+    .carousel img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 400px; /* Puoi abbassarlo o alzarlo a piacere */
+      object-fit: scale-down;
+      display: none;
+      margin: 0 auto;
+    }
+    
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .details {
+      flex: 1 1 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .description-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .description-text {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .reserve-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: black;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      text-align: center;
+      width: fit-content;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="language-switch">
+      <a href="oggetto7.html">IT</a> | <a href="/en/oggetti/oggetto7.html">EN</a>
+    </div>
+    <div class="logo-wrapper">
+      <a href="/index.html" class="logo">BURRO</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="carousel">
+      <img src="../immagini/Oggetto7_1.jpg" alt="Vista 1" class="active">
+      <img src="../immagini/Oggetto7_2.jpg" alt="Vista 2">
+      <img src="../immagini/Oggetto7_3.jpg" alt="Vista 3">
+      <div class="carousel-buttons">
+        <button onclick="changeSlide(-1)">&#10094;</button>
+        <button onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="description">
+        <div class="description-title">LAMPADA 'SPACE AGE', ANNI '60</div>
+        <div class="description-text">
+          vetro lattimo soffiato a bocca, metallo cromato<br>
+          <br>
+         
+        </div>
+      </div>
+      <a href="mailto:martaderoia@gmail.com?subject=Riserva%20Lampada 'Space Age'%20anni%20'60" class="reserve-btn">Riserva</a>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
+</body>
+</html>
