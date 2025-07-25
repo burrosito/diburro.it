@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -65,22 +65,24 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); 
-      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8cm; /* distanza tra gli oggetti */
       padding: 2rem;
-      max-width: 1000px;
-      margin: 0 auto; 
+      max-width: 900px; /* leggermente più stretta */
+      margin: 0 auto;
     }
 
     .item {
       background-color: white;
+      width: 200px; /* circa 0.5cm più stretta che prima */
       aspect-ratio: 1 / 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      color: #999;
+      justify-content: flex-start;
       overflow: hidden;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .item {
@@ -94,10 +96,25 @@
 
     .item img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
       display: block;
+      border: 1px solid #eee;
     }
+
+    .caption {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      line-height: 1.2;
+      color: #444;
+    }
+
+    .price {
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 0.3rem;
+    }
+    
     .about {
       max-width: 600px;
       margin: 3rem auto;
@@ -130,23 +147,23 @@
     <div class="subtitle">Oggetti d’arte e design</div>
   </div>
 
-  <div class="grid">
-    <a href="oggetti/oggetto1.html" class="item">
-      <img src="/immagini/oggetto1-thumb.jpg" alt="Oggetto 1" />
-    </a>
-    <a href="oggetti/oggetto2.html" class="item">
-      <img src="oggetto2_thumb.jpg" alt="Oggetto 2" />
-    </a>
-    <a href="oggetti/oggetto3.html" class="item">
-      <img src="/immagini/oggetto3-thumb.jpg" alt="Oggetto 3" />
-    </a>
-    <a href="oggetti/oggetto4.html" class="item">
-      <img src="oggetto4_thumb.jpg" alt="Oggetto 4" />
-    </a>
-    <a href="oggetti/oggetto5.html" class="item">
-    <img src="immagini/oggetto5-thumb.jpg" alt="Oggetto 5" />
-    </a>
-  </div>
+    <div class="grid">
+      <div class="item">
+        <a href="oggetti/oggetto1.html">
+          <img src="immagini/oggetto1-thumb.jpg" alt="Oggetto 1" />
+        </a>
+        <div class="caption">Coppia di applique 'Padina',anni '60<br/>Achille & Pier Giacomo Castiglioni</div>
+        <div class="price">€ 700</div>
+      </div>
+
+      <div class="item">
+        <a href="oggetti/oggetto2.html">
+          <img src="immagini/oggetto2-thumb.jpg" alt="Oggetto 2" />
+        </a>
+        <div class="caption">Lampada da tavolo<br/>Mid-century</div>
+        <div class="price">€ 320</div>
+      </div>
+
 
   <div class="about">
     Burro è una selezione personale di arredi, oggetti e piccole storie.
