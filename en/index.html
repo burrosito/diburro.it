@@ -10,7 +10,7 @@
   <style>
     @font-face {
       font-family: 'Black Mango';
-      src: url('black-mango-regular.ttf') format('truetype');
+      src: url('../black-mango-regular.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
@@ -121,6 +121,34 @@
       color: inherit;
       text-decoration: none;
     }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .item img {
+        max-width: 90%;
+      }
+
+      .caption {
+        font-size: 1rem;
+      }
+
+      .price {
+        font-size: 0.9rem;
+      }
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -130,70 +158,70 @@
       <a href="../index.html">IT</a>
     </div>
     <div class="title"><a href="index.html">BURRO</a></div>
-    <div class="subtitle">Objects of Art and Design</div>
+    <div class="subtitle">Art and design objects</div>
   </div>
 
   <div class="grid">
     <div class="item">
-      <a href="oggetti/oggetto1.html">
-        <img src="immagini/oggetto1-thumb.jpg" alt="Object 1" />
+      <a href="../oggetti/oggetto1.html">
+        <img src="../immagini/oggetto1-thumb.jpg" alt="Object 1" />
       </a>
-      <div class="caption">Pair of 'Padina' wall lamps, 1960s<br/>Achille & Pier Giacomo Castiglioni</div>
+      <div class="caption">Pair of 'Padina' wall lights, 1960s<br/>Achille & Pier Giacomo Castiglioni</div>
       <div class="price">€ 700</div>
     </div>
 
     <div class="item">
-      <a href="oggetti/oggetto2.html">
-        <img src="immagini/oggetto2-thumb.jpg" alt="Object 2" />
+      <a href="../oggetti/oggetto2.html">
+        <img src="../immagini/oggetto2_thumb.jpg" alt="Object 2" />
       </a>
       <div class="caption">Rare 'Gioielli' side table<br/>Piero Fornasetti</div>
       <div class="price">€ 2200</div>
     </div>
 
     <div class="item">
-      <a href="oggetti/oggetto3.html">
-        <img src="immagini/oggetto3-thumb.jpg" alt="Object 3" />
+      <a href="../oggetti/oggetto3.html">
+        <img src="../immagini/oggetto3-thumb.jpg" alt="Object 3" />
       </a>
-      <div class="caption">'Tallo' floor lamp, 1970s<br/>Roberto Pamio</div>
+      <div class="caption">‘Tallo’ floor lamp, 1970s<br/>Roberto Pamio</div>
       <div class="price">€ 550</div>
     </div>
 
     <div class="item">
-      <a href="oggetti/oggetto4.html">
-        <img src="immagini/oggetto4-thumb.jpg" alt="Object 4" />
+      <a href="../oggetti/oggetto4.html">
+        <img src="../immagini/oggetto4_thumb.jpg" alt="Object 4" />
       </a>
       <div class="caption">Rare umbrella stand with constellations, 1950s<br/>Piero Fornasetti</div>
       <div class="price">€ 2000</div>
     </div>
 
     <div class="item">
-      <a href="oggetti/oggetto5.html">
-        <img src="immagini/oggetto5-thumb.jpg" alt="Object 5" />
+      <a href="../oggetti/oggetto5.html">
+        <img src="../immagini/oggetto5-thumb.jpg" alt="Object 5" />
       </a>
       <div class="caption">Large table lamp, 1970s<br/></div>
       <div class="price">€ 600</div>
     </div>
 
     <div class="item">
-      <a href="oggetti/oggetto6.html">
-        <img src="immagini/oggetto7-thumb.jpg" alt="Object 6" />
+      <a href="../oggetti/oggetto6.html">
+        <img src="../immagini/Oggetto6_thumb.jpg" alt="Object 6" />
       </a>
-      <div class="caption">'Arco Romano' umbrella stand, 1950s<br/>Piero Fornasetti</div>
+      <div class="caption">‘Arco Romano’ umbrella stand, 1950s<br/>Piero Fornasetti</div>
       <div class="price">€ 1800</div>
     </div>
 
     <div class="item">
-      <a href="oggetti/oggetto7.html">
-        <img src="immagini/oggetto7-thumb.jpg" alt="Object 7" />
+      <a href="../oggetti/oggetto7.html">
+        <img src="../immagini/oggetto7-thumb.jpg" alt="Object 7" />
       </a>
-      <div class="caption">'Space Age' lamp, 1960s<br/></div>
+      <div class="caption">‘Space Age’ lamp, 1960s<br/></div>
       <div class="price">€ 550</div>
     </div>
   </div>
 
   <div class="about">
-    Burro is a personal selection of furniture, objects and little stories.
-    Each piece is chosen for its quality, shape and character.
+    Burro is a personal selection of furniture, objects and small stories.  
+    Each piece is chosen for its quality, shape and character.  
     A warm domestic space, a daily gesture.
   </div>
 
